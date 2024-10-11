@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Mixed-Session Conversation with Egocentric Memory">
+    <meta name="keywords"
+          content="Open-Domain Conversation, Mixed-Session Conversation, Egocentric Memory, Multi-Session Conversation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mixed-Session</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Mixed-Session Conversation with<br>Egocentric Memory</h1>
+                    <div class="is-size-5 publication-authors">
+            
+            <span class="author-block">
+              <a href="https://wlgud2757.github.io/">Jihyoung Jang</a></span>,
+                        <span class="author-block">
+              <a href="https://github.com/kty4119">Taeyoung Kim</a></span>,
+                        <span class="author-block">
+              <a href="https://hyounghk.github.io/">Hyounghun Kim</a>
+            </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://aigs.unist.ac.kr/eng/index.php"
+                                          target="_blank">UNIST AI</a><br>Findings of EMNLP 2024</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                <span class="link-block">
+                        <a href="https://arxiv.org/abs/2410.02503" target="_blank"
+                           class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="ai ai-arxiv"></i>
+                            </span>
+                            <span>arXiv</span>
+                        </a>
+                    </span>
+
+                            <span class="link-block">
+                        <a href="" target="_blank"
+                           class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>
+                    </span>
+
+                            <span class="link-block">
+                        <a href="" target="_blank"
+                           class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fas fa-database"></i>
+                            </span>
+                            <span>Dataset</span>
+                        </a>
+                    </span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Recently introduced dialogue systems have demonstrated high usability.
+                        However, they still fall short of reflecting real-world conversation scenarios.
+                        Current dialogue systems exhibit an inability to replicate the dynamic, continuous, long-term
+                        interactions involving multiple partners.
+                        This shortfall arises because there have been limited efforts to account for both aspects of
+                        real-world dialogues: deeply layered interactions over the long-term dialogue and widely
+                        expanded conversation networks involving multiple participants.
+                        As the effort to incorporate these aspects combined, we introduce Mixed-Session Conversation, a
+                        dialogue system designed to construct conversations with various partners in a multi-session
+                        dialogue setup.
+                        We propose a new dataset called MiSC to implement this system. The dialogue episodes of MiSC
+                        consist of 6 consecutive sessions, with four speakers (one main speaker and three partners)
+                        appearing in each episode.
+                        Also, we propose a new dialogue model with a novel memory management mechanism, called
+                        Egocentric Memory Enhanced Mixed-Session Conversation Agent (EMMA).
+                        EMMA collects and retains memories from the main speaker's perspective during conversations with
+                        partners, enabling seamless continuity in subsequent interactions.
+                        Extensive human evaluations validate that the dialogues in MiSC demonstrate a seamless
+                        conversational flow, even when conversation partners change in each session.
+                        EMMA trained with MiSC is also evaluated to maintain high memorability without contradiction
+                        throughout the entire conversation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <center>
+                <img src="./static/images/main.png" alt="Teaser" width="80%">
+            </center>
+            <div class="content has-text-justified">
+                A sample of our MiSC.
+                The main speaker collects each speaker's memory from the main speaker's perspective at the end of each
+                session and utilizes this memory to proceed with the conversation in the following session.
+                The memory referenced when generating utterances can be identified through symbols, and connected
+                memories are represented by the same symbol.
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Motivation</h2>
+
+                <div class="content has-text-justified">
+                    Open-domain conversations have generally evolved in two directions:<br>
+
+                    <table>
+                        <tr>
+                            <td style="min-width: 80px; padding-left: 0;"><strong>Width:</strong></td>
+                            <td>Expanding the number of participants involved (e.g., multi-party conversations)</td>
+                        </tr>
+                        <tr>
+                            <td style="min-width: 80px; padding-left: 0;"><strong>Depth:</strong></td>
+                            <td>Sustaining conversation continuity over time (e.g., multi-session conversations)</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <img src="./static/images/motivation.png" alt="method" width="90%">
+
+                <div class="content has-text-justified">
+
+                    Despite these advancements, there has been little research that addresses both breadth and depth
+                    together.
+                    This gap is addressed by the concept of <b>Mixed-Session Conversation</b>, a novel approach that
+                    combines both aspects.
+
+                    In a mixed-session conversation, the main speaker engages with different partners across multiple
+                    sessions.
+                    This contrasts with traditional multi-session conversations, where the speaker interacts with the
+                    same set of partners throughout.
+                    By introducing new conversation partners in each session, mixed-session conversations bring a
+                    dynamic, evolving interaction that enriches both the breadth and depth of the conversation.
+                    <br><br>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">MiSC</h2>
+
+                <img src="./static/images/misc.png" alt="method" width="80%">
+
+                <div class="content has-text-justified">
+
+                    <div class="content has-text-justified">
+                        We propose <b>MiSC</b>, the first dataset to implement mixed-session conversations.
+                        Each episode in MiSC features one main speaker interacting with three different partners across
+                        six continuous dialogue sessions.
+                        This dataset allows for dynamic interactions between the main speaker and different
+                        conversational partners, distinguishing MiSC from traditional multi-session or multi-party
+                        datasets where speakers engage with the static partners throughout.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Egocentric Memory</h2>
+
+                <div class="content has-text-justified">
+                    In mixed-session conversation, the main speaker must retain context across multiple sessions with
+                    different partners.
+                    To achieve seamless interactions in each session, the main speaker requires a separate memory
+                    mechanism capable of handling these complexities-something that hasn't existed before.
+                </div>
+
+                <img src="./static/images/memory.png" alt="method" width="60%">
+
+                <div class="content has-text-justified">
+
+                    To address this, we propose a novel memory manage mechanism called <b>Egocentric Memory</b>, which
+                    summarizes the memory elements of both the main speaker and their conversation partners from the
+                    main speaker's perspective during each session.
+                    However, simply summarizing these memories is insufficient as the sessions progress.
+                    Thus, we introduce the concept of 'memory links', ensuring that updates to the memory content remain
+                    interconnected across related memories, maintaining coherence throughout the conversation.
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">EMMA</h2>
+
+                <div class="content has-text-justified">
+                    We introduce <b>EMMA</b>, a new dialogue model trained with MiSC and built on egocentric memory,
+                    allowing to expand the conversation network both in width and depth from all perspectives.
+                </div>
+
+                <img src="./static/images/model.png" alt="method" width="80%">
+
+                <div class="content has-text-justified">
+                    EMMA collects memories of each conversation partner from its own perspective in every session,
+                    ensuring seamless continuity in subsequent sessions.
+                    It is composed of two modules: (1) a dialogue module and (2) a retrieval module, utilizing a total
+                    of 1B parameters (780M for the dialogue module and 220M for the retrieval module).
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{jang2024mixed,
+  title={Mixed-Session Conversation with Egocentric Memory},
+  author={Jang, Jihyoung and Kim, Taeyoung and Kim, Hyounghun},
+  journal={arXiv preprint arXiv:2410.02503},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p style="text-align: center;">Mixed-Session Conversation with Egocentric Memory<br>
+                        Jihyoung Jang, Taeyoung Kim, Hyounghun Kim<br>Findings of EMNLP 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
