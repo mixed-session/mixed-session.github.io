@@ -33,6 +33,10 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="stylesheet" href="./static/css/index-gradio.css">
+    <link rel="stylesheet" href="./static/css/live_theme.css">
+
     <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -78,7 +82,7 @@
                     </span>
 
                             <span class="link-block">
-                        <a href="" target="_blank"
+                        <a href="https://github.com/mixed-session/EMMA" target="_blank"
                            class="external-link button is-normal is-rounded is-dark">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
@@ -88,7 +92,7 @@
                     </span>
 
                             <span class="link-block">
-                        <a href="" target="_blank"
+                        <a href="https://huggingface.co/datasets/jihyoung/MiSC" target="_blank"
                            class="external-link button is-normal is-rounded is-dark">
                             <span class="icon">
                                 <i class="fas fa-database"></i>
@@ -293,6 +297,398 @@
     </div>
 </section>
 
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3 has-text-centered">Examples</h2>
+
+                <h3 class="title is-4">• A human live chat example where EMMA uses Egocentric Memory</h3>
+                <div class="content has-text-justified">
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: black;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+                        <div class="wrapper svelte-nab2ao"
+                             style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px; margin-bottom: 15px; align-items: center; justify-content: center; text-align: center;">
+                            <p><b>Speakers</b>: Alice (Bob's teacher, Main Speaker) and Bob (Student)</p>
+                            <p>⋮</p>
+                        </div>
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m1.png"
+                                         alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I'm worried that my grades aren't good enough for me to go to college. My future seems really bleak.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/w1.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I understand, Bob. It can be tough to see your dreams coming true, especially when you're struggling with grades.
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m1.png"
+                                         alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Could you possibly provide counseling to my parents regarding this matter? They're more concerned than I am.</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 5px;padding-bottom: 5px; align-items: center; justify-content: center; text-align: center;">
+                                <p>⋮</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content has-text-justified">
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: black;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+                        <div class="wrapper svelte-nab2ao"
+                             style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px; margin-bottom: 15px; align-items: center; justify-content: center; text-align: center;">
+                            <p><b>Speakers</b>: Alice (Bob's teacher, Main Speaker) and Henry (Bob's father)</p>
+                            <p>⋮</p>
+                        </div>
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m2.png"
+                                         alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Could I discuss my child with you?
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/w1.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Of course, I'd love to. Bob has been struggling with his grades lately and I think you'd be really helpful in seeking help.
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                <p><b>Retrieved Memory for Alice's last response</b>: I am willing to help Bob with his
+                                    grades, and he asked me for counseling to his parents. (about Alice)</p>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                <p><b>Linked Memory with retrieved memory</b>: Bob is having a hard time academically
+                                    and worrying about his grades being bad for college. (about Bob)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <h3 class="title is-4">• A human live chat example showing the differences between EMMA and the
+                    multi-session conversation model MSC 2.7B and ReBot when the conversation partner changes across
+                    sessions</h3>
+                <div class="content has-text-justified">
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: black;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+                        <div class="wrapper svelte-nab2ao"
+                             style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px; margin-bottom: 15px; align-items: center; justify-content: center; text-align: center;">
+                            <p><b>MSC 2.7B (Xu et al., 2022)</b></p>
+                        </div>
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m3.png"
+                                         alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>My head hurts so much and I keep vomiting.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot1.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Oh no! I hope you feel better soon. What did you eat? I had a bad case of food poisoning last week.
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 5px;padding-bottom: 5px; align-items: center; justify-content: center; text-align: center;">
+                                <p>⋮</p>
+                                <p><b>&lt;Start a new session&gt;</b></p>
+                            </div>
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m3.png"
+                                         alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Honey, were you busy today?</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot1.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I was. I was working at the hospital. I am sorry that you got sick. I would have been happy to take you out to eat.
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content has-text-justified">
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: black;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+                        <div class="wrapper svelte-nab2ao"
+                             style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px; margin-bottom: 15px; align-items: center; justify-content: center; text-align: center;">
+                            <p><b>ReBot (Jang et al., 2023)</b></p>
+                        </div>
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m3.png"
+                                         alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>My head hurts so much and I keep vomiting.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot2.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I'm sorry to hear that. How long have you been experiencing these symptoms?
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 5px;padding-bottom: 5px; align-items: center; justify-content: center; text-align: center;">
+                                <p>⋮</p>
+                                <p><b>&lt;Start a new session&gt;</b></p>
+                            </div>
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m3.png"
+                                         alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Honey, were you busy today?</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot2.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I'm sorry, but I have to be here for you. Can you tell me more about your symptoms?
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content has-text-justified">
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: black;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+                        <div class="wrapper svelte-nab2ao"
+                             style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px; margin-bottom: 15px; align-items: center; justify-content: center; text-align: center;">
+                            <p><b>EMMA (Ours)</b></p>
+                        </div>
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m3.png"
+                                         alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>My head hurts so much and I keep vomiting.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot3.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I have noticed that. I'm confirming you've got a headache. Can you tell me more about what's happening?
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 5px;padding-bottom: 5px; align-items: center; justify-content: center; text-align: center;">
+                                <p>⋮</p>
+                                <p><b>&lt;Start a new session&gt;</b></p>
+                            </div>
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/m3.png"
+                                         alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Honey, were you busy today?</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot3.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Yes, I had a lot of patients to see. How are you feeling today?
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <h3 class="title is-4">• An ablation study example between EMMA and a summary-based model for the same
+                    human live chat context</h3>
+                <div class="content has-text-justified">
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: black;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+                        <div class="wrapper svelte-nab2ao"
+                             style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px; margin-bottom: 15px; align-items: center; justify-content: center; text-align: center;">
+                            <p><b>Current session speakers</b>: Sophia (Leo's teacher, Main Speaker) and Ava (Leo's mom)
+                            </p>
+                            <p>⋮</p>
+                        </div>
+                        <div class="message-row bot-row svelte-1uvwjgr" style="margin-bottom: 15px;">
+                            <div class="avatar-container svelte-1uvwjgr">
+                                <img class="avatar-image svelte-1uvwjgr" src="./static/images/w2.png"
+                                     alt="avatar-bot"></div>
+                            <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                 style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>The reason I invited you to school this time is because Leo's math and science grades have improved significantly.</p>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/w3.png"
+                                         alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I'm glad to hear that. Leo is doing well and we've been talking about ways to make learning easier for him.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/w2.png"
+                                         alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Oh really? You are giving him a lot of encouragement at home. <b>Specifically, Leo's math score increased by 30 points, and science score increased by 50 points.</b></p>
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/w3.png"
+                                         alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr"
+                                     style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>That's great to hear. Do you think he's working on new concepts or just being less demanding in his classes?
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                <p><b>Current session summary (summary-based model)</b>: Leo's math and science grades
+                                    have improved significantly. Ava is giving him encouragement at home and trying to
+                                    keep him motivated and receptive to learning new things.</p>
+                            </div>
+                            <div class="wrapper svelte-nab2ao"
+                                 style="box-sizing: border-box; border: none; padding: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                <p><b>Egocentric Memory of current session (EMMA)</b>:</p>
+                                <p>- Leo's math and science grades have improved significantly, <b>with his math score
+                                    increasing by 30 points and his science score increasing by 50 points. (about
+                                    Sophia)</b></p>
+                                <p>- I have been helping Leo practice math, science, and English at home. (about
+                                    Sophia)</p>
+                                <p>- Sophia was impressed with my contribution. (about Ava)</p>
+                                <p>......</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
@@ -318,3 +714,5 @@
         </div>
     </div>
 </footer>
+
+</body>
